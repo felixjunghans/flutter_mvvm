@@ -20,7 +20,8 @@ void main(List<String> arguments) async {
   packageName = await getCurrentPackageName();
 
   // absolute path to flutter_mvvm library
-  final String libraryPath = path.dirname(Platform.script.toFilePath());
+  final String libraryPath =
+      path.join(path.dirname(Platform.script.toFilePath()), '../lib');
 
   if (packageName != null) {
     final parser = ArgParser()
