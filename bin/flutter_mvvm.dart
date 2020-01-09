@@ -35,8 +35,8 @@ void main(List<String> arguments) async {
 
     // check if name is provided
     if (name == null) {
-      stderr.writeln('error: screen name is required. e.g pub run '
-          'flutter_mvvm/view_generator.dart example');
+      stderr.writeln('error: screen name is required. e.g flutter pub run '
+          'flutter_mvvm example');
       exitCode = 2;
     } else {
       pathToScreen = '$uiPath/${name.snakeCase}';
