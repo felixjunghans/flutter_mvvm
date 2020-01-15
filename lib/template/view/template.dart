@@ -15,6 +15,9 @@ class Template extends ViewModelProvider<BaseViewModel> {
   /// route name of the Screen
   static const String routeName = "/template";
 
+  /// initialize Screen to use with MaterialApp routes
+  static WidgetBuilder routeInitializer = (_) => Template();
+
   /// Initializes the ViewModel for this screen.
   final TemplateViewModel templateViewModel = TemplateViewModel();
 
