@@ -12,6 +12,8 @@ import 'package:flutter_mvvm/template/view_model/template_view_model.dart';
 /// to automatically bind the [TemplateViewModel]
 /// to all Widgets inside [Template]
 class Template extends ViewModelProvider<BaseViewModel> {
+  final TemplateViewModel templateViewModel = TemplateViewModel();
+
   @override
   Widget content(BuildContext context) {
     return TemplateScreen();
@@ -19,6 +21,11 @@ class Template extends ViewModelProvider<BaseViewModel> {
 
   @override
   TemplateViewModel bindViewModel(BuildContext context) {
-    return TemplateViewModel();
+    return templateViewModel;
+  }
+
+  @override
+  void dispose() {
+    templateViewModel.dispose();
   }
 }

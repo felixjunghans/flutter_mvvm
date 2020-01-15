@@ -17,4 +17,6 @@ abstract class ViewModelProvider<T extends BaseViewModel>
       child: content(context),
     );
   }
+
+  void dispose();
 }

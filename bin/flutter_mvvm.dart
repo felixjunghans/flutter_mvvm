@@ -84,6 +84,7 @@ Future<void> copyAndRenameTemplate(
       File file = File(path.join(destination.path,
           path.basename(entity.path.replaceAll('template', name.snakeCase))));
       await file.replaceAll('Template', name.pascalCase, copyFrom: entity);
+      await file.replaceAll('templateViewModel', '${name.camelCase}ViewModel');
       await file.replaceAll('package:flutter_mvvm/template',
           '$packageName${pathToScreen.replaceFirst('lib', '')}');
       await file.replaceAll('template', '${name.snakeCase}');
