@@ -22,14 +22,10 @@ class Template extends ViewModelProvider<BaseViewModel> {
   final TemplateViewModel templateViewModel = TemplateViewModel();
 
   @override
-  Widget content(BuildContext context) {
-    return TemplateScreen();
-  }
+  Widget content(BuildContext context) => TemplateScreen();
 
   @override
-  TemplateViewModel bindViewModel(BuildContext context) {
-    return templateViewModel;
-  }
+  TemplateViewModel bindViewModel(BuildContext context) => templateViewModel;
 
   @override
   void dispose() {
