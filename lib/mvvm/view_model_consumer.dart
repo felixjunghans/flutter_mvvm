@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 abstract class ViewModelConsumer<T extends BaseViewModel>
     extends StatelessWidget {
   @protected
-  builder(BuildContext context, T viewModel, Widget child);
+  Widget builder(BuildContext context, T viewModel, Widget child);
 
   @override
   Widget build(BuildContext context) {
