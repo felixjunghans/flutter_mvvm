@@ -12,6 +12,10 @@ import 'package:flutter_mvvm/template/view_model/template_view_model.dart';
 /// to automatically bind the [TemplateViewModel]
 /// to all Widgets inside [Template]
 class Template extends ViewModelProvider<BaseViewModel> {
+  /// route name of the Screen
+  static const String routeName = "/template";
+
+  /// Initializes the ViewModel for this screen.
   final TemplateViewModel templateViewModel = TemplateViewModel();
 
   @override

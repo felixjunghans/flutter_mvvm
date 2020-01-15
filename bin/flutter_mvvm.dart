@@ -87,6 +87,8 @@ Future<void> copyAndRenameTemplate(
       await file.replaceAll('templateViewModel', '${name.camelCase}ViewModel');
       await file.replaceAll('package:flutter_mvvm/template',
           '$packageName${pathToScreen.replaceFirst('lib', '')}');
+      await file.replaceAll(
+          '"/template"', '"/${name.snakeCase.replaceAll("_", "-")}"');
       await file.replaceAll('template', '${name.snakeCase}');
       stdout.writeln('${entity.path} created.');
     }
