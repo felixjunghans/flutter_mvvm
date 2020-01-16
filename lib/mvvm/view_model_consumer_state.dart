@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 /// ViewModelConsumerState<T>
 ///
 /// Consumes the Provider<T> of the current Context
-abstract class ViewModelConsumerState<T extends StatefulWidget>
+abstract class ViewModelConsumerState<T extends StatefulWidget, T2>
     extends State<T> {
   @override
   void initState() {
@@ -16,10 +16,10 @@ abstract class ViewModelConsumerState<T extends StatefulWidget>
   Widget init();
 
   @protected
-  Widget builder(BuildContext context, T viewModel, Widget child);
+  Widget builder(BuildContext context, T2 viewModel, Widget child);
 
   Widget build(BuildContext context) {
-    return Consumer<T>(
+    return Consumer<T2>(
       builder: builder,
     );
   }
