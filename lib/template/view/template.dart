@@ -10,7 +10,14 @@ import 'package:flutter_mvvm/template/view_model/template_view_model.dart';
 /// Extends [ViewModelProvider]
 /// to automatically bind the [TemplateViewModel]
 /// to all Widgets inside [Template]
-class Template extends ViewModelProvider<TemplateViewModel> {
+class Template extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _Template();
+  }
+}
+
+class _Template extends ViewModelProviderState<Template, TemplateViewModel> {
   /// route name of the Screen
   static const String routeName = "/template";
 
@@ -28,6 +35,8 @@ class Template extends ViewModelProvider<TemplateViewModel> {
 
   @override
   void dispose() {
+    super.dispose();
+
     templateViewModel.dispose();
   }
 }
