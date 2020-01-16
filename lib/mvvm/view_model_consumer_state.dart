@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mvvm/mvvm/base_view_model.dart';
 import 'package:provider/provider.dart';
 
 /// ViewModelConsumerState<T>
 ///
 /// Consumes the Provider<T> of the current Context
-abstract class ViewModelConsumerState<T extends StatefulWidget, T2>
-    extends State<T> {
+abstract class ViewModelConsumerState<T extends StatefulWidget,
+    T2 extends BaseViewModel> extends State<T> {
   @override
   void initState() {
     super.initState();
