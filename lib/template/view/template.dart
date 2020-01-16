@@ -13,11 +13,12 @@ import 'package:flutter_mvvm/template/view_model/template_view_model.dart';
 class Template extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _Template();
+    return _TemplateState();
   }
 }
 
-class _Template extends ViewModelProviderState<Template, TemplateViewModel> {
+class _TemplateState
+    extends ViewModelProviderState<Template, TemplateViewModel> {
   /// route name of the Screen
   static const String routeName = "/template";
 
