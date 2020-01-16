@@ -11,6 +11,12 @@ import 'package:flutter_mvvm/template/view_model/template_view_model.dart';
 /// to automatically bind the [TemplateViewModel]
 /// to all Widgets inside [Template]
 class Template extends StatefulWidget {
+  /// route name of the Screen
+  static const String routeName = "/template";
+
+  /// initialize Screen to use with MaterialApp routes
+  static WidgetBuilder routeInitializer = (_) => Template();
+
   @override
   State<StatefulWidget> createState() {
     return _TemplateState();
@@ -19,12 +25,6 @@ class Template extends StatefulWidget {
 
 class _TemplateState
     extends ViewModelProviderState<Template, TemplateViewModel> {
-  /// route name of the Screen
-  static const String routeName = "/template";
-
-  /// initialize Screen to use with MaterialApp routes
-  static WidgetBuilder routeInitializer = (_) => Template();
-
   /// Initializes the ViewModel for this screen.
   final TemplateViewModel templateViewModel = TemplateViewModel();
 
