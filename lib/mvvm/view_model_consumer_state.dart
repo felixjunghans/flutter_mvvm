@@ -14,7 +14,7 @@ abstract class ViewModelConsumerState<T extends StatefulWidget,
   }
 
   @protected
-  Widget init();
+  void init();
 
   @protected
   Widget builder(BuildContext context, T2 viewModel, Widget child);
