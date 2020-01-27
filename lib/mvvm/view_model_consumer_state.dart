@@ -7,6 +7,8 @@ import 'package:provider/provider.dart';
 /// Consumes the Provider<T> of the current Context
 abstract class ViewModelConsumerState<T extends StatefulWidget,
     T2 extends BaseViewModel> extends State<T> {
+  T2 get viewModel => Provider.of<T2>(context);
+
   @override
   void initState() {
     super.initState();
