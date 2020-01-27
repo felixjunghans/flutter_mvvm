@@ -7,6 +7,8 @@ import 'package:provider/provider.dart';
 /// Consumes the Provider<T> of the current Context
 abstract class ViewModelConsumer<T extends BaseViewModel>
     extends StatelessWidget {
+  T viewModel(BuildContext context) => Provider.of<T>(context);
+
   @protected
   Widget builder(BuildContext context, T viewModel, Widget child);
 
